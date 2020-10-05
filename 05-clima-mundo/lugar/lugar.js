@@ -7,7 +7,7 @@ const getLugarLatLong = async(dir) => {
 
     const instance = axios.create({
         baseURL: `https://devru-latitude-longitude-find-v1.p.rapidapi.com/latlon.php?location=${ encureUlr }`,
-        headers: { "x-RapidApi-Key": "85e4c25d6dmshdfd7af4a56d196fp1d21d6jsnfa1e1377a401" }
+        headers: { "x-RapidApi-Key": "API" }
     });
 
     const resp = await instance.get();
