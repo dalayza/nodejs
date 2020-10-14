@@ -1,6 +1,8 @@
 const express = require('express');
 const mongoose = require('mongoose');
 
+const path = require('path');
+
 const app = express();
 const bodyParser = require('body-parser');
 
@@ -9,6 +11,8 @@ require('../config/config')
 app.use(bodyParser.urlencoded({ extended: false }));
 
 app.use(bodyParser.json());
+
+app.use(express.static(path.resolve(__dirname, '../public')));
 
 app.use(require('../routes/index'));
 
