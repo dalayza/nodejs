@@ -10,7 +10,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 
 app.use(bodyParser.json());
 
-app.use(require('../routes/usuario'));
+app.use(require('../routes/index'));
 
 mongoose.set('useNewUrlParser', true);
 mongoose.set('useFindAndModify', false);
