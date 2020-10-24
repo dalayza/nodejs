@@ -10,8 +10,14 @@ socket.on('disconnect', function() {
     console.log('Desconectado del servidor! ');
 });
 
+socket.on('estadoActual', function(resp) {
+    console.log(resp);
+
+    label.text(resp.actual);
+});
+
 $('button').on('click', function() {
-    socket.emit('sigueinteTicket', null, function(siguienteTicket) {
+    socket.emit('siguienteTicket', null, function(siguienteTicket) {
         label.text(siguienteTicket);
     });
 });
